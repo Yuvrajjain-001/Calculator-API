@@ -1,0 +1,91 @@
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background-image:url(https://www.pixelstalk.net/wp-content/uploads/2016/07/Plain-Background-Screen-Download.jpg); 
+		}
+
+		.button{
+	  background-color:blue; /* Green */
+  border: none;
+  color: white;
+  padding: 20px 25px;
+  text-align:center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 5px 3px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+		
+.button {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+
+}
+
+.button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+	</style>
+
+<script>
+	//Enter the digit
+function displaynum(nx)
+{
+	calc.n.value=calc.n.value+nx;
+}
+//Clear the box
+function ac(){
+calc.n.value="";
+}
+//Delete the number
+function mydel(){
+   	var prevalue=calc.n.value;
+   	calc.n.value=prevalue.substr(0,prevalue.length-1);
+   }
+</script>
+
+</head>
+<body>
+<center>
+<form name=calc>
+<input type="text" name=n class="text" style=" text-align: right ;padding-left:20px 30px;
+height:40px; width:270px;
+border:2px solid black; 
+padding-top:5px; "/>
+
+<br>
+<div class="styl">
+<input type="button" class="button"  name=n7 value=7 onclick="displaynum(n7.value)"/>
+<input type="button" class="button" name=n8 value=8 onclick="displaynum(n8.value)"/>
+<input type="button" class="button"  name=n9 value=9 onclick="displaynum(n9.value)"/>
+<input type="button" class="button"  name=nsub value=- onclick="displaynum(nsub.value)"/>
+<br>
+<input type="button" class="button" name=n4 value=4 onclick="displaynum(n4.value)"/>
+<input type="button" class="button"name=n5 value=5 onclick="displaynum(n5.value)"/>
+<input type="button" class="button"name=n6 value=6 onclick="displaynum(n6.value)"/>
+<input type="button" class="button"name=nadd value=+ onclick="displaynum(nadd.value)"/>
+<br>
+<input type="button"class="button" name=n1 value=1 onclick="displaynum(n1.value)"/>
+<input type="button" class="button"name=n2 value=2 class="button"onclick="displaynum(n2.value)"/>
+<input type="button"class="button" name=n3 value=3 onclick="displaynum(n3.value)"/>
+<input type="button" class="button" name=nmul value=* onclick="displaynum(nmul.value)"/>
+<br>
+<input type="button" class="button"name=n0 value=0 onclick="displaynum(n0.value)"/>
+<input type="button" class="button"name=ndot value=. onclick="displaynum(ndot.value)"/>
+<input type="button" class="button"name=nequ value== onclick="n.value=eval(n.value)"/>
+<input type="button" class="button"name=ndiv value=/ onclick="displaynum(ndiv.value)"/></br>
+<input type="button" name="clear" class="button" value="AC" onclick="ac()">
+<input type="button" name="del" class="button"value="DEL" onclick="mydel()">
+<br>
+<br>
+</div>
+</center>
+</form>
+</body>
+</html>
